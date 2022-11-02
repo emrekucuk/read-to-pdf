@@ -34,3 +34,4 @@
 /home/emre/workspace/dotnet/read-to-pdf/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
 /home/emre/workspace/dotnet/read-to-pdf/bin/Debug/net6.0/Newtonsoft.Json.dll
 /home/emre/workspace/dotnet/read-to-pdf/bin/Debug/net6.0/BouncyCastle.Crypto.dll
+/home/emre/workspace/dotnet/read-to-pdf/bin/Debug/net6.0/Npgsql.dll
