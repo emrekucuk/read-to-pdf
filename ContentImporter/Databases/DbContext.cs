@@ -1,7 +1,7 @@
 using System.Data.Common;
 using Npgsql;
 
-namespace Databases;
+namespace ContentImporter.Databases;
 
 public class DbContext
 {
@@ -40,14 +40,14 @@ public class DbContext
     }
 
 
-    // public void GetAllCourses()
+    // public void GetAllCurruncies()
     // {
     //     var connection = Connection();
     //     connection.Open();
 
     //     DbCommand command = connection.CreateCommand();
 
-    //     command.CommandText = "select * from \"Courses\"";
+    //     command.CommandText = "select * from \"Curruncies\"";
 
 
     //     var reader = command.ExecuteReader();

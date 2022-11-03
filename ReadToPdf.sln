@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentImporter", "ContentImporter\ContentImporter.csproj", "{340005F5-FDEF-4A1E-873E-689E041D51A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search", "Search\Search.csproj", "{573C535C-EFAD-441C-AE0A-B5BF1C7FA3E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{340005F5-FDEF-4A1E-873E-689E041D51A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340005F5-FDEF-4A1E-873E-689E041D51A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340005F5-FDEF-4A1E-873E-689E041D51A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340005F5-FDEF-4A1E-873E-689E041D51A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573C535C-EFAD-441C-AE0A-B5BF1C7FA3E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573C535C-EFAD-441C-AE0A-B5BF1C7FA3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573C535C-EFAD-441C-AE0A-B5BF1C7FA3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573C535C-EFAD-441C-AE0A-B5BF1C7FA3E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -3,7 +3,7 @@ using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf.Canvas.Parser.Listener;
 
-namespace PdfUtilities;
+namespace ContentImporter.PdfUtilities;
 public static class PdfUtilities
 {
     public static string ReadFile(string pdfPath)

@@ -1,4 +1,4 @@
-namespace FileUtilites;
+namespace ContentImporter.FileUtilites;
 
 public static class FileUtilities
 {
