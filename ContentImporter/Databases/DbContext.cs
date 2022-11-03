@@ -5,7 +5,9 @@ namespace ContentImporter.Databases;
 
 public class DbContext
 {
-    public static string connectionString = "User ID=postgres;Password=password;Server=localhost;Port=5432;Database=currency-exchange;Integrated Security=true;Pooling=true;";
+    // public static string connectionString = "User ID=postgres;Password=password;Server=localhost;Port=5432;Database=currency-exchange;Integrated Security=true;Pooling=true;";
+    public static string connectionString = "User ID=postgres;Password=EeDReSw8cX5@Ceg&+JTst3FFgeCfPRBJNYF@X!N4zq2vB4F*;Server=141.98.1.177;Port=5432;Database=currency-exchange;Integrated Security=true;Pooling=true;";
+
     public DbConnection Connection()
     {
 
@@ -16,7 +18,6 @@ public class DbContext
     public void InstertData(string filePath, string pageText)
     {
         using (var connection = new NpgsqlConnection(connectionString))
-
         {
             Console.Out.WriteLine("Opening connection");
             connection.Open();
@@ -49,7 +50,6 @@ public class DbContext
 
     //     command.CommandText = "select * from \"Curruncies\"";
 
-
     //     var reader = command.ExecuteReader();
     //     while (reader.Read())
     //     {
@@ -58,5 +58,6 @@ public class DbContext
     //     }
     //     reader.Close();
     // }
+
 
 }
