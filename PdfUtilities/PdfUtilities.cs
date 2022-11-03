@@ -20,6 +20,63 @@ public static class PdfUtilities
                 pageText.Append(strategy.GetResultantText());
             }
         }
-        return pageText.ToString();
+        var content = pageText.ToString();
+
+        content = RemoveUnCharacters(content);
+        return content;
+    }
+
+    private static string RemoveUnCharacters(string content)
+    {
+        List<char> unUsedCharacters = new List<char>()
+        {
+            '\n',
+            '\t',
+            '.',
+            ',',
+            ';',
+            ':',
+            ')',
+            '(',
+            '[',
+            ']',
+            '{',
+            '}',
+            '$',
+            '!',
+            '#',
+            '%',
+            '&',
+            '*',
+            '-',
+            '_',
+            '=',
+            '+',
+            '`',
+            '/',
+            '\\',
+            '|',
+            '~',
+            '<',
+            '>',
+            '?',
+            '0',
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+        };
+
+        unUsedCharacters.ForEach((unUsedCharacter) =>
+        {
+            content = content.Replace(unUsedCharacter, ' ');
+        });
+
+        return content;
     }
 }
