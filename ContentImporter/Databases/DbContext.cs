@@ -1,22 +1,12 @@
-using System.Data.Common;
 using Npgsql;
 
 namespace ContentImporter.Databases;
 
 public class DbContext
 {
-    public static string connectionString = "User ID=postgres;Password=password;Server=localhost;Port=5432;Database=currency-exchange;Integrated Security=true;Pooling=true;";
-
-    public DbConnection Connection()
-    {
-
-        var connection = new NpgsqlConnection(connectionString);
-        return connection;
-    }
-
     public void InstertData(string filePath, string pageText)
     {
-        using (var connection = new NpgsqlConnection(connectionString))
+        using (var connection = new NpgsqlConnection(Definitions.ConnectionString))
         {
             Console.Out.WriteLine("Opening connection");
             connection.Open();
@@ -38,7 +28,6 @@ public class DbContext
             System.Console.WriteLine($"----------Update----------");
         }
     }
-
 
     // public void GetAllCurruncies()
     // {

@@ -1,6 +1,7 @@
 ﻿using System.Data.Common;
 
-// DbConnection connection = Databases.DbContext.Connection();
+// var definitions = new Definitions();
+// DbConnection connection = definitions.Connection();
 
 // System.Console.WriteLine(connection.State);
 // connection.Open();

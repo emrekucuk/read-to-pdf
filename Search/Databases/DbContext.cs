@@ -1,24 +1,14 @@
-using System.Data.Common;
 using Npgsql;
 
 namespace Search.Databases;
 
 public class DbContext
 {
-    public static string connectionString = "User ID=postgres;Password=password;Server=localhost;Port=5432;Database=currency-exchange;Integrated Security=true;Pooling=true;";
-
-    public DbConnection Connection()
-    {
-
-        var connection = new NpgsqlConnection(connectionString);
-        return connection;
-    }
-
     public void GetAllSearchableContent(string searchText)
     {
         searchText = searchText.Trim().Replace(" ", " | ");
 
-        using (var connection = new NpgsqlConnection(connectionString))
+        using (var connection = new NpgsqlConnection(Definitions.ConnectionString))
         {
             connection.Open();
 
