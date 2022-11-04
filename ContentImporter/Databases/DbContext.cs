@@ -5,8 +5,7 @@ namespace ContentImporter.Databases;
 
 public class DbContext
 {
-    // public static string connectionString = "User ID=postgres;Password=password;Server=localhost;Port=5432;Database=currency-exchange;Integrated Security=true;Pooling=true;";
-    public static string connectionString = "User ID=postgres;Password=EeDReSw8cX5@Ceg&+JTst3FFgeCfPRBJNYF@X!N4zq2vB4F*;Server=141.98.1.177;Port=5432;Database=currency-exchange;Integrated Security=true;Pooling=true;";
+    public static string connectionString = "User ID=postgres;Password=password;Server=localhost;Port=5432;Database=currency-exchange;Integrated Security=true;Pooling=true;";
 
     public DbConnection Connection()
     {
