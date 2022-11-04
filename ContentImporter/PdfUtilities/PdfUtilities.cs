@@ -8,24 +8,28 @@ public static class PdfUtilities
 {
     public static string ReadFile(string pdfPath)
     {
-        var pageText = new StringBuilder();
-        using (PdfDocument pdfDocument = new PdfDocument(new PdfReader(pdfPath)))
+        PdfReader pdfReader = new PdfReader(pdfPath);
+        PdfDocument pdfDoc = new PdfDocument(pdfReader);
+        string pageContent = null;
+        for (int page = 1; page <= pdfDoc.GetNumberOfPages(); page++)
         {
-            var pageNumbers = pdfDocument.GetNumberOfPages();
-            for (int i = 1; i <= pageNumbers; i++)
-            {
-                LocationTextExtractionStrategy strategy = new LocationTextExtractionStrategy();
-                PdfCanvasProcessor parser = new PdfCanvasProcessor(strategy);
-                parser.ProcessPageContent(pdfDocument.GetFirstPage());
-                pageText.Append(strategy.GetResultantText());
-            }
+            ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
+            pageContent += PdfTextExtractor.GetTextFromPage(pdfDoc.GetPage(page), strategy);
         }
-        var content = pageText.ToString();
+        pdfDoc.Close();
+        pdfReader.Close();
+        var content = pageContent.ToString();
 
         content = RemoveUnCharacters(content);
+        content = FixTurkishCharacters(content);
         return content;
     }
 
+    private static string FixTurkishCharacters(string content)
+    {
+        content = content.Replace('Đ', 'İ');
+        return content;
+    }
     private static string RemoveUnCharacters(string content)
     {
         List<char> unUsedCharacters = new List<char>()
