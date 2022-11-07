@@ -1,4 +1,4 @@
-namespace ContentImporter.FileUtilites;
+namespace PdfOperations.FileUtilites;
 
 public static class FileUtilities
 {

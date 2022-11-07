@@ -7,14 +7,14 @@
 // connection.Open();
 // System.Console.WriteLine(connection.State);
 
-var dbContext = new ContentImporter.Databases.DbContext();
+var dbContext = new PdfOperations.Databases.DbContext();
 
-var filePaths = ContentImporter.FileUtilites.FileUtilities.GetAllFileFromDirectory("pdfs");
+var filePaths = PdfOperations.FileUtilites.FileUtilities.GetAllFileFromDirectory("pdfs");
 
 filePaths.ForEach((filePath) =>
 {
     System.Console.WriteLine(filePath);
-    var pageText = ContentImporter.PdfUtilities.PdfUtilities.ReadFile(filePath);
+    var pageText = PdfOperations.PdfUtilities.PdfUtilities.ReadFile(filePath);
 
     dbContext.InstertData(filePath, pageText);
 

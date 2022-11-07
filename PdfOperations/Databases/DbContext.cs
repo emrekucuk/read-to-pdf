@@ -1,6 +1,6 @@
 using Npgsql;
 
-namespace ContentImporter.Databases;
+namespace PdfOperations.Databases;
 
 public class DbContext
 {

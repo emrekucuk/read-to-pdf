@@ -1,6 +1,6 @@
 using Npgsql;
 
-namespace Search.Databases;
+namespace PgFullTextSearch.Databases;
 
 public class DbContext
 {

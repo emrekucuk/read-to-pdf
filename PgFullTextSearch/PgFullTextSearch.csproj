@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ContentImporter\ContentImporter.csproj" />
+    <ProjectReference Include="..\PdfOperations\PdfOperations.csproj" />
   </ItemGroup>
 
 </Project>
